@@ -338,3 +338,18 @@
 
 // proper way to destroy the Owl Carousel 2
     $('.size-owl-carousel').data('owlCarousel').destroy();
+
+// the JQuery .scroll() method has a bug that can cause flicker if used to create sticky elements with position fixed and compensating padding; vanilla JS alternative for this works well
+    var nav = document.querySelector("#slot4"),
+        topOfNav = nav.offsetTop;
+
+    function stickElementss() {
+        if (window.scrollY <= topOfNav) {
+            $('#refineControl, .customSortBy').removeClass('sticky-element');  
+            $("body").css("paddingTop","0");
+        } else if (window.scrollY > topOfNav) {
+            $('#refineControl, .customSortBy').addClass('sticky-element'); 
+            $("body").css("paddingTop","40px");
+        }
+    }
+    window.addEventListener('scroll', stickElementss);
