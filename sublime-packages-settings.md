@@ -1,3 +1,4 @@
+```javascript
 {
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
@@ -55,3 +56,4 @@
 	"theme": "Material-Theme.sublime-theme",
 	"word_wrap": true
 }
+```
