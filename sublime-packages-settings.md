@@ -1,6 +1,6 @@
-### Package list and settings for my Sublime Text 3
+## Package list and settings for my Sublime Text 3
 
-Packages:
+### Packages:
 * Package Control
 * A File Icon
 * Bracket Highlighter
@@ -15,7 +15,7 @@ Packages:
 * Sublime Linter - jshint
 * Terminal
 
-Settings: 
+### Settings: 
 ```javascript
 {
 	"always_show_minimap_viewport": true,
