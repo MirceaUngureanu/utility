@@ -1,19 +1,19 @@
 ### Package list and settings for my Sublime Text 3
 
 Packages:
-	* Package Control
-	* A File Icon
-	* Bracket Highlighter
-	* Emmet
-	* JQuery
-	* Material Theme
-	* Merge Windows
-	* Side Bar Enhancements
-	* Sublime Code Intel
-	* Sublime Linter
-	* Sublime Linter - csslint
-	* Sublime Linter - jshint
-	* Terminal
+* Package Control
+* A File Icon
+* Bracket Highlighter
+* Emmet
+* JQuery
+* Material Theme
+* Merge Windows
+* Side Bar Enhancements
+* Sublime Code Intel
+* Sublime Linter
+* Sublime Linter - csslint
+* Sublime Linter - jshint
+* Terminal
 
 Settings: 
 ```javascript
