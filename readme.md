@@ -1,1 +1,1 @@
-A collection of utility snippets and configs.
+## A collection of utility snippets and configs.
