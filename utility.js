@@ -343,3 +343,16 @@
         }
     }
     window.addEventListener('scroll', stickElementss);
+
+// correct assignment of 'window.onload'
+
+    window.onload = someFunction;
+    // Simply set the "onload" variable to be equals to the "someFunction" function ; when the page finishes loading, this function is called.
+
+    window.onload = someFunction();
+    // Sets the "onload" variable to be the result of calling someFunction. Unless "someFunction" itself returns a function, this is probably not what you want to do.
+
+    //By default, the onload function is called with a single "event" argument. If you want to pass arguments, you might be able to do something like this :
+    window.onload = function (event) {
+      someFunction(someArg, someOtherArg);
+    };
