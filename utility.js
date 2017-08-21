@@ -356,3 +356,24 @@
     window.onload = function (event) {
       someFunction(someArg, someOtherArg);
     };
+
+// code to scrape up the dom starting from child and keeping just the wrappers relevant to it after cloning
+    $(document).ready(function() {
+        $('#BVRRContainer .bv-cleanslate').clone().insertAfter('.addBagButtonWrap');
+        $('.messagesButtonsWrap .bv-cleanslate').addClass('reviews-clone');
+        var allParents = $('.reviews-clone .bv-secondary-rating-summary .bv-secondary-rating-summary-list').parentsUntil(".reviews-clone"); 
+        for (var i = 0; i < allParents.length; i++) {
+           if (i === 0) {
+                $(allParents[i]).contents(':not(.reviews-clone .bv-secondary-rating-summary .bv-secondary-rating-summary-list)').remove();
+            } else {
+                $(allParents[i]).contents().not($(allParents[i-1])).remove();
+            }
+        }
+       var allChildren = $(".reviews-clone .bv-secondary-rating-summary .bv-secondary-rating-summary-list tbody tr");
+       for (var j = 0; j < allChildren.length; j++) {
+            if (j > 2) {
+                $(allChildren[j]).remove();
+            }
+       }
+       $(".reviews-clone .bv-secondary-rating-summary .bv-secondary-rating-summary-list tbody").append('<div id="review-cta"><p>Read reviews</p></div>');
+    });
