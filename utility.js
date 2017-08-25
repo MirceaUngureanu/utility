@@ -377,3 +377,16 @@
        }
        $(".reviews-clone .bv-secondary-rating-summary .bv-secondary-rating-summary-list tbody").append('<div id="review-cta"><p>Read reviews</p></div>');
     });
+// dynamically populate "CUSTOMER_ID_" input value based on URL parameter
+	function GetURLParameter(sParam) {
+		var sPageURL = window.location.search.substring(1),
+			sURLVariables = sPageURL.split('&');
+		for (var i = 0; i < sURLVariables.length; i++) {
+			var sParameterName = sURLVariables[i].split('=');
+			if (sParameterName[0] == sParam) {
+				return sParameterName[1];
+			}
+		}
+	}
+	var customerIdValue = GetURLParameter("CUSTOMER_ID_");
+	$("input[name='CUSTOMER_ID_']").attr('value', customerIdValue);
